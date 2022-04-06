@@ -2,33 +2,14 @@ pipeline {
   agent any
 
   environment {
-    REGISTRY_URL = ''
-    ECR_REGION = ''
-    K8S_NAMESPACE = ''
-    K8S_CLUSTER_NAME = ''
-    K8S_CLUSTER_REGION = ''
+    REGISTRY_URL = '352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepo'
+    ECR_REGION = 'us-east-1'
+    K8S_NAMESPACE = 'devops-alfnar-k8s-eliasNM'
+    K8S_CLUSTER_NAME = 'devops-alfnar-k8s'
+    K8S_CLUSTER_REGION = 'eu-north-1'
   }
 
   stages {
-    stage('MNIST Web Server - build'){
-      when { branch "master" }
-      steps {
-          sh '''
-          echo building
-          '''
-      }
-    }
-
-    stage('MNIST Web Server - deploy'){
-        when { branch "master" }
-        steps {
-            sh '''
-            echo deploying
-            '''
-        }
-    }
-
-
     stage('MNIST Predictor - build'){
         when { branch "master" }
         steps {
