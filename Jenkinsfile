@@ -10,7 +10,7 @@ pipeline {
   }
 
   stages {
-    stage('MNIST Predictor - build'){
+    stage('MNIST Predictor - building...'){
         when { branch "master" }
         steps {
             sh '''
