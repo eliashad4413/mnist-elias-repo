@@ -4,7 +4,7 @@ pipeline {
   environment {
     REGISTRY_URL = '352708296901.dkr.ecr.us-east-1.amazonaws.com'
     ECR_REGION = 'us-east-1'
-    K8S_NAMESPACE = 'devops-alfnar-k8s'
+    K8S_NAMESPACE = 'devops-alfnar-k8s-eliasNM'
     K8S_CLUSTER_NAME = 'devops-alfnar-k8s'
     K8S_CLUSTER_REGION = 'eu-north-1'
   }
@@ -24,7 +24,7 @@ pipeline {
         }
     }
 
-    stage('MNIST Predictor - deplooy'){
+    stage('MNIST Predictor - deploy'){
         when { branch "master" }
         steps {
             sh '''
