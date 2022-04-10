@@ -6,7 +6,7 @@ metadata:
   labels:
     app: mnist-predictor
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: mnist-predictor
@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: mnist-predictor
-          image: {{REGISTRY_URL}}/{{IMG_NAME}}
+          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepo:latest
 ---
 apiVersion: v1
 kind: Service
