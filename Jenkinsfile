@@ -14,7 +14,7 @@ pipeline {
         when { branch "master" }
         steps {
             sh '''
-            IMAGE="eliasrepo:0.0.${BUILD_NUMBER}"
+            IMAGE="eliasrepo:0.1.${BUILD_NUMBER}"
             cd ml_model
             aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin ${REGISTRY_URL}
             docker build -t ${IMAGE} .
