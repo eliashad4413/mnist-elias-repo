@@ -24,7 +24,7 @@ pipeline {
         }
     }
 
-    stage('MNIST Predictor - deploying'){
+    stage('MNIST Predictor - deployingg'){
         when { branch "master" }
         steps {
             sh '''
