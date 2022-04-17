@@ -19,7 +19,14 @@ stages {
           '''
         }
     }
-
+    stage('MNIST Web Server - deploy'){
+        when { branch "master" }
+        steps {
+            sh '''
+            echo deploying
+            '''
+        }
+    }
     stage('MNIST Predictor - building...'){
         when { branch "master" }
         steps {
