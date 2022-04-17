@@ -23,7 +23,8 @@ stages {
         when { branch "master" }
         steps {
             sh '''
-            'python3 -m unittest mnist-elias-repo/infra/webserver/tests/test_flask_web.py'
+            cd webserver
+            'python3 -m unittest webserver/tests/test_flask_web.py'
             echo deploying
             '''
         }
