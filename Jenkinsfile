@@ -7,15 +7,7 @@ pipeline {
     K8S_NAMESPACE = 'devops-alfnar-k8s-eliasnm'
     K8S_CLUSTER_NAME = 'devops-alfnar-k8s'
     K8S_CLUSTER_REGION = 'eu-north-1'
-  }
 
-    stage('MNIST Web Server - deploy'){
-        when { branch "master" }
-        steps {
-            sh '''
-            'python4 -m unittest simple_webserver/tests/test_flask_web.py'
-            echo 'deploying'
-            '''
         }
     }
 
