@@ -23,7 +23,7 @@ stages {
         when { branch "master" }
         steps {
             sh '''
-            'python -m unittest simple_webserver/tests/test_flask_web.py'
+            'python -m unittest webserver/tests/test_flask_web.py'
             echo deploying
             '''
         }
