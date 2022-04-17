@@ -10,6 +10,15 @@ pipeline {
 
 
     }
+stages {
+    stage('MNIST Web Server - build'){
+      when { branch "master" }
+      steps {
+          sh '''
+          echo building
+          '''
+        }
+    }
 
   stages {
     stage('MNIST Predictor - building...'){
