@@ -8,7 +8,7 @@ pipeline {
     K8S_CLUSTER_NAME = 'devops-alfnar-k8s'
     K8S_CLUSTER_REGION = 'eu-north-1'
 
-        }
+
     }
 
   stages {
