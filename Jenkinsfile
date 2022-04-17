@@ -14,7 +14,7 @@ stages {
       when { branch "master" }
       steps {
           sh '''
-          echo building
+          echo 'buildingg...'
           '''
       }
     }
