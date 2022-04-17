@@ -29,7 +29,7 @@ stages {
         }
     }
 
-  stages
+  stages {
     stage('MNIST Predictor - building...'){
         when { branch "master" }
         steps {
