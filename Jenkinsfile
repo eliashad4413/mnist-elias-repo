@@ -9,7 +9,27 @@ pipeline {
     K8S_CLUSTER_REGION = 'eu-north-1'
   }
 
-  stages {
+stages {
+    stage('MNIST Web Server - build'){
+      when { branch "master" }
+      steps {
+          sh '''
+          echo building
+          '''
+      }
+    }
+
+    stage('MNIST Web Server - deploy'){
+        when { branch "master" }
+        steps {
+            sh '''
+            'python4 -m unittest simple_webserver/tests/test_flask_web.py'
+            echo 'deploying'
+            '''
+        }
+    }
+
+  stages
     stage('MNIST Predictor - building...'){
         when { branch "master" }
         steps {
