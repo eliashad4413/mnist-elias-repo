@@ -15,7 +15,7 @@ stages {
       when { branch "master" }
       steps {
           sh '''
-            IMAGE="webserver:0.0.1${BUILD_NUMBER}"
+            IMAGE="eliasrepowebserver:0.0.1${BUILD_NUMBER}"
             cd webserver
             aws ecr get-login-password --region $ECR_REGION | docker login --username AWS --password-stdin ${REGISTRY_URL}
             docker build -t ${IMAGE} .
