@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'ec2-fleet' }
+  agent any
 
   environment {
     REGISTRY_URL = '352708296901.dkr.ecr.us-east-1.amazonaws.com'
