@@ -29,7 +29,7 @@ stages {
         when { branch "master" }
         steps {
             sh '''
-            cd webserver
+            cd infra/k8s
             IMG_NAME=eliasrepowebserver:0.0.1${BUILD_NUMBER}
 
             # replace registry url and image name placeholders in yaml
