@@ -33,9 +33,9 @@ stages {
             IMG_NAME=eliasrepowebserver:0.0.1${BUILD_NUMBER}
 
             # replace registry url and image name placeholders in yaml
-            sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" mnist-predictor.yaml
-            sed -i "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" mnist-predictor.yaml
-            sed -i "s/{{IMG_NAME}}/$IMG_NAME/g" mnist-predictor.yaml
+            sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" mnist-webserver.yaml
+            sed -i "s/{{K8S_NAMESPACE}}/$K8S_NAMESPACE/g" mnist-webserver.yaml
+            sed -i "s/{{IMG_NAME}}/$IMG_NAME/g" mnist-webserver.yaml
 
             # get kubeconfig creds
             aws eks --region $K8S_CLUSTER_REGION update-kubeconfig --name $K8S_CLUSTER_NAME
