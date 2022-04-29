@@ -29,8 +29,8 @@ stages {
         when { branch "master" }
         steps {
             sh '''
-            cd infra/k8s
-            IMG_NAME=mnist-predictor:0.0.${BUILD_NUMBER}
+            cd webserver
+            IMG_NAME=eliasrepowebserver:0.0.1${BUILD_NUMBER}
 
             # replace registry url and image name placeholders in yaml
             sed -i "s/{{REGISTRY_URL}}/$REGISTRY_URL/g" mnist-predictor.yaml
