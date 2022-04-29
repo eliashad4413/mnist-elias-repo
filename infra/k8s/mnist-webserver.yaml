@@ -4,16 +4,16 @@ metadata:
   name: mnist-webserver
   namespace: devops-alfnar-k8s-eliasnm
   labels:
-    app: mnist-predictor
+    app: mnist-webserver
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: mnist-predictor
+      app: mnist-webserver
   template:
     metadata:
       labels:
-        app: mnist-predictor
+        app: mnist-webserver
     spec:
       terminationGracePeriodSeconds: 30
       containers:
@@ -26,7 +26,7 @@ metadata:
   name: mnist-predictor-service
 spec:
   selector:
-    app: mnist-predictor
+    app: mnist-webserver
   ports:
     - port: 8080
       targetPort: 8081
