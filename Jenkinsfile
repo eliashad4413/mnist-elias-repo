@@ -25,7 +25,7 @@ stages {
 
         }
     }
-    stage('MNIST Web Serverr - deploy'){
+    stage('MNIST Web Server - deploy'){
         when { branch "master" }
         steps {
             sh '''

@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mnist-predictor
+  name: mnist-webserver
   namespace: devops-alfnar-k8s-eliasnm
   labels:
     app: mnist-predictor
