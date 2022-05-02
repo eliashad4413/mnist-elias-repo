@@ -8,7 +8,7 @@ metadata:
 spec:
   replicas: 1
   selector: mnist-webserver
-    matchLabels:
+    matchLabels: false
       app: mnist-webserver
   template:
     metadata:
@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: mnist-webserver
-          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:0.0.
+          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:0.0.170
 ---
 apiVersion: v1
 kind: Service
