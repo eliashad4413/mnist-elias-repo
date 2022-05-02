@@ -4,21 +4,21 @@ metadata:
   name: mnist-webserver
   namespace: devops-alfnar-k8s-eliasnm
   labels:
-    app: mnist-predictor
+    app: mmnist-webserver
 spec:
   replicas: 1
-  selector:
+  selector: mnist-predictor
     matchLabels:
-      app: mnist-predictor
+      app: mnist-webserver
   template:
     metadata:
       labels:
-        app: mnist-predictor
+        app: mnist-webserver
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-        - name: mnist-predictor
-          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:0.0.170
+        - name: mnist-webserver
+          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:0.0.
 ---
 apiVersion: v1
 kind: Service
@@ -26,7 +26,7 @@ metadata:
   name: mnist-predictor-service
 spec:
   selector:
-    app: mnist-predictor
+    app: mnist-webserver
   ports:
     - port: 8080
       targetPort: 8081
