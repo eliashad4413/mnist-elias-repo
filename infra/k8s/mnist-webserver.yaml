@@ -7,7 +7,7 @@ metadata:
     app: mmnist-webserver
 spec:
   replicas: 1
-  selector: mnist-predictor
+  selector: mnist-webserver
     matchLabels:
       app: mnist-webserver
   template:
