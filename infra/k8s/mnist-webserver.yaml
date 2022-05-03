@@ -18,7 +18,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
         - name: mnist-webserver
-          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:0.0.159
+          image: 352708296901.dkr.ecr.us-east-1.amazonaws.com/eliasrepowebserver:latest
 ---
 apiVersion: v1
 kind: Service
