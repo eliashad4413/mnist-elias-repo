@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mnist-web-server-service
+  name: mnist-webserver
   namespace:
   labels:
     app: mmnist-webserver
