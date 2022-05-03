@@ -8,7 +8,7 @@ metadata:
 spec:
   replicas: 1
   selector: mnist-webserver
-    matchLabels: flase
+  - matchLabels: flase
       app: mnist-webserver
   template:
     metadata:
