@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mnist-webserver
-  namespace: 'devops-alfnar-k8s'
+  namespace:
   labels:
     app: mmnist-webserver
 spec:
