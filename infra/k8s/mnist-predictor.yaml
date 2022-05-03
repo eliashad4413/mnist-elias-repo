@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mnist-predictor
-  namespace: devops-alfnar-k8s-eliasnm
+  namespace: elias-namespace
   labels:
     app: mnist-predictor
 spec:
