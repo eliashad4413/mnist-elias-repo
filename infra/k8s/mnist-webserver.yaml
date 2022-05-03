@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Service
 metadata:
-  name: mnist-webserver
+  name: mnist-web-server-service
   namespace: devops-alfnar-k8s-eliasnm
   labels:
     app: mmnist-webserver
@@ -26,7 +26,7 @@ metadata:
   name: mnist-predictor-service
 spec:
   selector:
-    app: mnist-webserver
+    app: mnist-web-server
   ports:
     - port: 8080
       targetPort: 8081
