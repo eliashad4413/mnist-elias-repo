@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mnist-web-server-service
-  namespace: elias-namespace
+  namespace:
   labels:
     app: mmnist-webserver
 spec:
