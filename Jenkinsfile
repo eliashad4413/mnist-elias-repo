@@ -76,8 +76,6 @@ stages {
 
             # apply to your namespace
             kubectl apply -f mnist-predictor.yaml -n $K8S_NAMESPACE
-            # getting fluentd in place
-            helm install fluentd fluent/fluentd
             '''
         }
     }
