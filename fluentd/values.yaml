@@ -1,0 +1,14 @@
+fileConfigs:
+  04_outputs.conf: |-
+    <label @OUTPUT>
+      <match **>
+        @type cloudwatch_logs
+        log_group_name Elias-Logs-Fluentd
+        log_stream_name log-stream-name
+        auto_create_stream true
+        region eu-north-1
+      </match>
+    </label>
+
+plugins:
+ - fluent-plugin-cloudwatch-logs
