@@ -4,7 +4,7 @@ fileConfigs:
       <match **>
         @type cloudwatch_logs
         log_group_name Elias-Logs-Fluentd
-        log_stream_name log-stream-name
+        log_stream_name eliaslogs
         auto_create_stream true
         region eu-north-1
       </match>
