@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mnist-predictor-service
+  name: mnistwebserver-serivce
   namespace: devops-alfnar-k8s-eliasnm
 spec:
   selector:
